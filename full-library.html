@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raising Young Authors</title>
+    <meta name="description" content="Join the waitlist for Insanjo, a real-time sales tracking, bookkeeping, and predictive analytics tool designed to streamline sales management and decision-making.">
+    <meta name="keywords" content="sales tracking, bookkeeping, predictive analysis, sales management, business analytics, Insanjo, real-time sales insights, business efficiency, inventory, stock keeping">
+    <meta property="og:title" content="Writing Page, Raising Young Authors">
+    <meta property="og:description" content="Be the first to access Writing Page, Raising Young Authors.">
+    <meta property="og:image" content="https://insanjo.com/images/logoBox.png">
+    <meta property="og:url" content="https://insanjo.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8d7xj1z5l5e5e5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">
+    <link rel="icon" href="images/New Logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=support_agent" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Outfit:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a clean, readable font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the Inter font to the entire page for a consistent look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* A light gray background */
+        }
+        /* Style for the add to cart button to match the image */
+        .cart-btn {
+            background-color: #10B981; /* A shade of green */
+            color: white;
+            border-radius: 0.375rem; /* 6px */
+            padding: 0.5rem; /* 8px */
+            transition: background-color 0.2s ease-in-out;
+        }
+        .cart-btn:hover {
+            background-color: #059669; /* A darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <a href="index.html">
+            <img src="images/New Logo.png" alt="RaisingYoungAuthorLogo">
+        </a>
+        </div>
+
+        <nav>
+        <div class="nav-links" id="navLinks">
+            <ul class="menu">
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <a href="javascript:void(0)" id="resourcesToggle">
+                Resources <i class="fa fa-caret-down"></i>
+                </a>
+                <div class="dropdown" id="resourcesDropdown" style="display: none;">
+                <div class="dropImage">
+                    <img src="images/Library.jpg" alt="Library">
+                    <span>Register and Unlock your <br> personal learning space.</span>
+                </div>
+                <div class="dropText">
+                    <ul>
+                    <li><a href="#" class="dropTop">Resources</a></li>
+                    <hr style="margin-top: -6px;">
+                    <li><a href="courses.html">Courses <span class="material-icons-sharp">arrow_forward</span></a></li>
+                    <li><a href="workshop.html">Workbook Shop <span class="material-icons-sharp">arrow_forward</span></a></li>
+                    </ul>
+                </div>
+                </div>
+            </li>
+            <li><a href="compitition.html">Competition</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+        </nav>
+
+        <!-- Submit Button -->
+        <div id="mobileHeadBtnWrapper">
+        <a href="writing.html" class="headBtn" id="headBtn">Submit Your Writing
+            <span class="material-icons-sharp">create</span>
+        </a>
+        </div>
+
+        <!-- Hamburger & Close Icons -->
+        <div class="menu-toggle">
+        <i class="fa fa-bars" id="openMenu" onclick="showMenu()"></i>
+        <i class="fa fa-times" id="closeMenu" onclick="hideMenu()"></i>
+        </div>
+    </header>
+
+    <section class="write-head-Top" style="margin-bottom: 0 !important;">
+        <div class="about-container">
+            <h1>Course Library</h1>
+            <p>Explore our growing collection of self-paced writing courses designed <br> to inspire, educate, and empower young authors at every stage of <br> their journey.</p>
+        </div>
+        <div class="headerBtns">
+            <a href="complete-library.html" class="headerBtn">Get Full Access To Complete Library
+                <span class="material-icons-sharp">
+                    play_lesson
+                </span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Main container for the catalogue -->
+    <div class="container mx-auto" style="max-width: 1300px; margin-bottom: 100px;">
+        <div id="catalogueGrid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Cards will be injected here dynamically -->
+        </div>
+    </div>
+
+    <section class="featured" id="stories">
+        <div class="contains keys">
+            <div class="innerBase">
+                <h2>Get Full Access to The <br> Entire <span>Library</span></h2>
+                <p>We take safety seriously. All community interactions are <br> guided by kindness, respect, and encouragement—so <br> everyone feels welcome and heard. Our moderators ensure it <br> remains a positive space for growth.</p>
+                <a href="#"><span style="font-size: 24.95px; font-weight: 700; cursor: pointer;">Get Full Course Library</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured" id="stories">
+        <div class="contains">
+        <div class="card6">
+            <div class="card-content2" style="align-items: flex-start;">
+            <div class="lefts">
+                <p class="left-text">Subscribe Our</p>
+                <p class="left-text2">Newsletter</p>
+                <p style="font-size: 19px; margin-top: 30px; margin-bottom: 20px; color: #ffffff; font-weight: 500; font-family: 'Urbanist', serif;">Subscribe to our news letter and the first to receive insight, <br> updates and writing tips to help you be the star that you are 
+                </p>
+            </div>
+            <div class="right">
+                <p class="states">Subscribe for updates on what’s new at Raising Young Authors</p>
+                <form>
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit">Subscribe</button>
+                </form>
+                <span class="states">By subscribing, you agree to our Privacy Policy</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="features" id="stories">
+        <div class="footer-cont">
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/New Logo.png" alt="RaisingYoungAuthorLogo">
+            </a>
+        </div>
+        <div class="centers">
+            <div class="footer-top">
+            <p>About Us</p>
+            <p>Courses</p>
+            <p>Workbooks</p>
+            <p>Community</p>
+            <p>Contact Us</p>
+            <p>FQA</p>
+            </div>
+            <hr style="border: 1px solid #000000; width: 100%; margin: 0 auto;">
+            <div class="footer-down">
+            <p style="color: #000000;">Copyright © 2025 Raising Young Authors, Inc. | All rights reserved.</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="icons">
+            <a href="https://www.facebook.com/raisingyoungauthors/" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/raising.young.authors/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-whatsapp" style="margin-right: 0;"></i>
+            </div>
+            <p style="color: #204F3D;">Support: raisingyoungauthors@gmail.com</p>
+            <p>Location: KM. 3 Old Express Way</p>
+        </div>
+        </div>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+
+<script>
+    const books = [
+        {
+        title: "Creative Writing Basics",
+        description: "Build a strong foundation with guides.",
+        price: "NGN 3,578",
+        image: "images/course 1.jpg"
+        },
+        {
+        title: "Creative Writing Basics",
+        description: "Build a strong foundation with guides.",
+        price: "NGN 3,578",
+        image: "images/course 2.jpg"
+        },
+        {
+        title: "Creative Writing Basics",
+        description: "Build a strong foundation with guides.",
+        price: "NGN 3,578",
+        image: "images/course 3.jpg"
+        },
+        {
+        title: "Creative Writing Basics",
+        description: "Build a strong foundation with guides.",
+        price: "NGN 3,578",
+        image: "images/course 4.jpg"
+        },
+        {
+            title: "Another Great Book",
+            description: "An amazing read for all ages.",
+            price: "NGN 4,200",
+            image: "images/course 5.png"
+        },
+        {
+        title: "The Final Chapter",
+        description: "A thrilling conclusion.",
+        price: "NGN 2,999",
+        image: "images/course 6.jpg"
+        },
+        {
+        title: "The Final-Final Chapter",
+        description: "A thrilling conclusion.",
+        price: "NGN 2,999",
+        image: "images/course 8.jpg"
+        }
+        // Add more books here
+    ];
+
+    const catalogueGrid = document.getElementById("catalogueGrid");
+
+    books.forEach((book, index) => {
+    const card = document.createElement("div");
+    card.className =
+        "full-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer";
+
+    // Add an onclick handler to store the book and redirect
+    card.onclick = () => {
+        localStorage.setItem("selectedCourse", JSON.stringify(book));
+        window.location.href = "course-details.html";
+    };
+
+    card.innerHTML = `
+        <div class="p-4 full-4">
+        <img src="${book.image}" alt="${book.title} Cover" class="w-full full-autos object-cover rounded-md">
+        </div>
+        <div class="p-4">
+        <h3 class="font-bold text-lg">${book.title}</h3>
+        <p class="text-gray-600 text-sm mt-1">${book.description}</p>
+        <div class="flex justify-between items-center mt-4">
+            <p class="font-bold text-gray-800">${book.price}</p>
+            <button class="cart-btn" aria-label="Add to cart" onclick="event.stopPropagation()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-shopping-cart">
+                <circle cx="8" cy="21" r="1"/>
+                <circle cx="19" cy="21" r="1"/>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78
+                        a2 2 0 0 0 1.95-1.57l1.65-7.43H5.16"/>
+            </svg>
+            </button>
+        </div>
+        </div>
+    `;
+
+    catalogueGrid.appendChild(card);
+    });
+</script>
+
+</html>
