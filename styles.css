@@ -1963,7 +1963,7 @@ input[type="file"] {
         font-size: 1.8rem;
     }
 
-     #mobileHeadBtnWrapper span {
+    #mobileHeadBtnWrapper span {
         display: none;
     }
 
@@ -2251,7 +2251,7 @@ input[type="file"] {
         font-weight: 500;
     }
 
-     #mobileHeadBtnWrapper span {
+    #mobileHeadBtnWrapper span {
         display: none;
     }
 
@@ -2412,3 +2412,19 @@ input[type="file"] {
         gap: 20px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .container,
+    .contains {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 16px;
+    }
+
+    .head-Top,
+    .quote-section,
+    .featured {
+        padding: 20px 16px !important;
+    }
+}
+
