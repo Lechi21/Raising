@@ -2308,9 +2308,11 @@ input[type="file"] {
     header {
         width: 100%;
         flex-direction: column;
-        padding: 1rem 1.5rem;
+        padding: 0.8rem 1.5rem;
         align-items: flex-start;
         position: fixed;
+        background: #ffffff;
+        box-shadow: none;
     }
 
     header nav {
@@ -2371,11 +2373,44 @@ input[type="file"] {
         margin-top: 10px;
     }
 
+    .container,
+    .contains {
+        max-width: 100% !important;
+        width: 100% !important;
+        /* padding: 0 16px; */
+        margin-top: 20px !important;
+    }
+
+    .head-Top {
+        padding: 20px 16px !important;
+        margin-top: 120px;
+    }
+
     #mobileHeadBtnWrapper {
         display: none;
         width: 100%;
         margin-top: 10px;
         text-align: center;
+    }
+
+    .head-Top h1 {
+        font-size: 2rem;
+    }
+
+    .head-Top p {
+        margin-top: 15px;
+        font-size: 1.1rem;
+    }
+
+    .headerBtns {
+        gap: 0px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -20px;
+    }
+
+    .headerBtns .headerBtn2 {
+        margin-top: 10px;
     }
 
     #mobileHeadBtnWrapper.active {
@@ -2407,6 +2442,36 @@ input[type="file"] {
         display: block;
     }
 
+    .quote-section {
+        margin-top: 60px;
+        padding: 10px 15px
+    }
+
+    .quote-content {
+        padding: 25px;
+    }
+
+    .featured {
+        margin-top: 0px;
+        padding: 20px 15px !important;
+    }
+
+    .cards, .cards2, .cards3, .cards4, .cards5 {
+        flex-basis: 100% !important;
+    }
+
+    .card-content2 {
+        gap: 5px;
+    }
+
+    .card-content2 .lefts .left-text, .card-content2 .lefts .left-text2 {
+        font-size: 18px;
+    }
+
+    .card-content2 .rights span {
+        font-size: 12px !important;
+    }
+
     .features .footer-cont {
         flex-direction: row;
         gap: 20px;
@@ -2414,17 +2479,6 @@ input[type="file"] {
 }
 
 @media screen and (max-width: 768px) {
-    .container,
-    .contains {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 16px;
-    }
-
-    .head-Top,
-    .quote-section,
-    .featured {
-        padding: 20px 16px !important;
-    }
+    
 }
 

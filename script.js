@@ -3,6 +3,7 @@ function showMenu() {
     document.getElementById("mobileHeadBtnWrapper").classList.add("active");
     document.getElementById("openMenu").style.display = "none";
     document.getElementById("closeMenu").style.display = "block";
+    // document.getElementById("genHeads").style.background = "white";
 }
 
 function hideMenu() {
@@ -10,6 +11,7 @@ function hideMenu() {
     document.getElementById("mobileHeadBtnWrapper").classList.remove("active");
     document.getElementById("openMenu").style.display = "block";
     document.getElementById("closeMenu").style.display = "none";
+    // document.getElementById("genHeads").style.background = "linear-gradient(to right, #fff 50%, #ffefd5 100%);";
 }
 
 
