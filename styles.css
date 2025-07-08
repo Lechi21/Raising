@@ -2357,14 +2357,18 @@ input[type="file"] {
         width: 100%;
         left: 0;
         top: auto;
-        padding: 20px;
+        /* padding: 20px; */
         border: none;
         box-shadow: none;
     }
 
     .dropdown .dropImage img {
         height: auto;
-        width: 100%;
+        width: 80%;
+    }
+
+    li a span {
+        display: none !important;  
     }
 
     .headBtn {
@@ -2462,6 +2466,7 @@ input[type="file"] {
 
     .card-content2 {
         gap: 5px;
+        flex-direction: column;
     }
 
     .card-content2 .lefts .left-text, .card-content2 .lefts .left-text2 {
@@ -2472,13 +2477,48 @@ input[type="file"] {
         font-size: 12px !important;
     }
 
+    .closer .prop {
+        font-size: 18px !important;
+    }
+
+    .card6 .card-content2 .lefts .prop {
+        font-size: 16px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .right form {
+        flex-direction: column;
+    }
+
+    .right input[type="email"] {
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    footer {
+        margin: 0px !important;
+        padding: 20px !important;;
+    }
+
     .features .footer-cont {
-        flex-direction: row;
+        flex-direction: column;
         gap: 20px;
+    }
+
+    .footer-cont .logo img {
+        width: 60px;
+        margin-bottom: -40px;
+    }
+
+    .features .footer-cont .centers {
+        gap: 0.5rem;
+        order: 3;
+    }
+
+    .features .footer-cont .centers .footer-top {
+        gap: 1rem;
+        justify-content: center;
     }
 }
 
-@media screen and (max-width: 768px) {
-    
-}
 
