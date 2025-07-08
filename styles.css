@@ -2488,6 +2488,7 @@ input[type="file"] {
 
     .right form {
         flex-direction: column;
+        margin-bottom: 15px;
     }
 
     .right input[type="email"] {
@@ -2518,6 +2519,120 @@ input[type="file"] {
     .features .footer-cont .centers .footer-top {
         gap: 1rem;
         justify-content: center;
+    }
+
+    /* ABOUT */
+    .about-container {
+        margin-top: 15px;
+    }
+
+    .abouts {
+        margin-bottom: 15px !important;
+    }
+
+    .about-contains .about-cards {
+        padding: 0px;
+    }
+
+    .about-contains .about-cards h1 {
+        font-size: 32px !important;
+    }
+
+    .about-contains .about-card {
+        flex-basis: 100%;
+    }
+
+    .headerBtns img {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .about-contains4 .about-cards4 h1 {
+        font-size: 32px;
+        margin-bottom: 0px;
+    }
+
+    .about-contains4 .about-cards4 p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .Pic-Court .pic .picture img {
+        height: 260px;
+    }
+
+    .Pic-Court .pic .pic-text {
+        padding: 25px;
+    }
+
+    /* COURSE */
+    .course-head-Top {
+        padding-bottom: 0px;
+        margin-top: 50px;
+    }
+
+    .course-Court {
+        margin-top: 110px;
+    }
+
+    .featured .grace {
+        margin-bottom: 20px !important  ;
+    }
+
+    .courses {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* workshop */
+    .write-head-Top {
+        margin-top: 60px;
+    }
+
+    .about-container h1 {
+        font-size: 32px;
+    }
+
+    .about-container p {
+        font-size: 18px;
+    }
+
+    /* COMPITITION */
+    .com-head-Top {
+        margin-top: 60px;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+    }
+
+    .com-about .com-text {
+        padding: 20px 20px;
+    }
+
+    .com-about .com-text h1 {
+        font-size: 23px;
+    }
+
+    .com-about .com-text p {
+        font-size: 18px;
+    }
+
+    .compitition {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .featured .base {
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    .base .innerBase {
+        padding: 20px;
+    }
+
+    .base .innerBase p {
+        font-size: 18px;
     }
 }
 
