@@ -791,9 +791,16 @@ header .hamburger {
     justify-content: space-between;
 }
 
+.football {
+    display: flex;
+    align-items: center;
+    flex-basis: 60%;
+    justify-content: space-between;
+}
+
 .features .footer-cont .centers {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
     flex-direction: column;
 }
@@ -813,6 +820,7 @@ header .hamburger {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    flex-basis: 40%;
 }
 
 .icons {
@@ -2184,6 +2192,10 @@ input[type="file"] {
         gap: 20px;
     }
 
+    .football {
+        gap: 10rem;
+    }
+
     .footer-cont .logo img {
         width: 80px;
     }
@@ -2203,7 +2215,7 @@ input[type="file"] {
     }
 
     .footer-cont .right {
-        align-items: flex-start;
+        align-items: flex-end;
     }
 }
 
@@ -2388,6 +2400,8 @@ input[type="file"] {
     .head-Top {
         padding: 20px 16px !important;
         margin-top: 120px;
+        height: 50vh;
+        min-height: 50vh;
     }
 
     #mobileHeadBtnWrapper {
@@ -2504,6 +2518,15 @@ input[type="file"] {
     .features .footer-cont {
         flex-direction: column;
         gap: 20px;
+        position: relative;
+    }
+
+    .football {
+        order: 2;
+        flex-direction: column;
+        width: 100%;
+        gap: 3rem;
+        align-items: normal;
     }
 
     .footer-cont .logo img {
@@ -2513,12 +2536,33 @@ input[type="file"] {
 
     .features .footer-cont .centers {
         gap: 0.5rem;
-        order: 3;
+        /* order: 3; */
     }
 
-    .features .footer-cont .centers .footer-top {
-        gap: 1rem;
+    .footer-cont .right {
+        order: 1;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+    }
+
+    .features .footer-cont .centers p {
+        color: #204F3D;
+        font-size: 14px;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .features .footer-cont .centers .footer-top{
+        align-items: center;
         justify-content: center;
+    }
+
+    /* .footer-top {
+        gap: 0.1rem !important;
+    } */
+
+    .footer-down {
+        text-align: center;
     }
 
     /* ABOUT */
@@ -2536,6 +2580,7 @@ input[type="file"] {
 
     .about-contains .about-cards h1 {
         font-size: 32px !important;
+        text-align: center;
     }
 
     .about-contains .about-card {
@@ -2598,6 +2643,60 @@ input[type="file"] {
         font-size: 18px;
     }
 
+    .h-autos {
+        height: 15vh !important;
+    }
+
+    .p-400 {
+        padding: 1rem 10px 0 10px !important;
+    }
+
+    .p-4 .font-bold {
+        font-size: 14px;
+    }
+
+    .detailed {
+        font-size: 20px !important;
+    }
+
+    /* BOOK DETAILS */
+    .contd {
+        padding: 0px;
+    }
+
+    .cards44, .card44 {
+        flex-basis: 100%;
+        padding: 30px;
+    }
+
+    .upload-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    /* FULL LIBRARY */
+    .featured .keys {
+        padding: 0px;
+    }
+
+    .keys .innerBase {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .keys .innerBase p {
+        font-size: 16px;
+    }
+
+    .full-white {
+        width: 100%;
+    }
+
+    .little {
+    height: 15vh !important;
+    overflow: hidden;
+}
+
     /* COMPITITION */
     .com-head-Top {
         margin-top: 60px;
@@ -2633,6 +2732,135 @@ input[type="file"] {
 
     .base .innerBase p {
         font-size: 18px;
+    }
+
+    /* COMMUNITY SECTION */
+    .community {
+        height: 70vh;
+        min-height: 70vh;
+    }
+
+    .comm h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .comm p {
+        font-size: 18px;
+    }
+
+    .comm .comm-card3 img {
+        width: 100%;
+    }
+
+    .comCheck {
+        margin-bottom: 0 !important;
+    }
+
+    .featured .based {
+        margin: 0px !important;
+        padding: 0px !important;;
+    }
+
+    .based .innerBase {
+        padding: 25px;
+    }
+
+    .based .innerBase p {
+        font-size: 18px;
+    }
+
+    .commers {
+        margin: 0px !important;
+    }
+
+    .commers .cope {
+        padding: 0 !important;;
+        margin: 0 !important;
+    }
+
+    .featured .bases {
+        padding: 0px !important;
+    }
+
+    .bases .innerBase {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .bases .innerBase p {
+        font-size: 18px;
+    }
+
+    /* CONTACTS */
+    .contact-head-Top {
+        height: 55vh;
+        min-height: 55vh;
+    }
+
+    .contacts {
+        flex-direction: row;
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .ROSE {
+        margin-top: 0px !important;
+        padding: 6px !important;
+        font-size: 12px;
+    }
+
+    .ROSE span {
+        font-size: 18px !important;
+    }
+
+    .contacts2 {
+        gap: 20px;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .cardo2 {
+        flex-basis: 100% !important;
+        padding: 20px !important;
+    }
+
+    .card33, .cards33 {
+        flex-basis: 100% !important;
+        padding: 20px !important;
+    }
+
+    /* WRITING */
+    .bios {
+        justify-content: center;
+        gap: 20px;
+        font-size: 12px;
+        margin-bottom: 45px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .writer4 ol li {
+        margin-bottom: 10px;
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .loads {
+        text-align: center;
+    }
+
+    form .notes {
+        padding: 8px !important;
+        font-size: 12px !important;
+    }
+
+    .noter, .cards33 .notes {
+        margin-top: -45px;
     }
 }
 
