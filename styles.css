@@ -2320,7 +2320,7 @@ input[type="file"] {
     header {
         width: 100%;
         flex-direction: column;
-        padding: 0.8rem 1.5rem;
+        padding: 0.4rem 1.5rem;
         align-items: flex-start;
         position: fixed;
         background: #ffffff;
@@ -2394,7 +2394,7 @@ input[type="file"] {
         max-width: 100% !important;
         width: 100% !important;
         /* padding: 0 16px; */
-        margin-top: 20px !important;
+        margin-top: 10px !important;
     }
 
     .head-Top {
@@ -2748,6 +2748,10 @@ input[type="file"] {
 
     .comm p {
         font-size: 18px;
+    }
+
+    .comm .comm-cards3 {
+        margin-top: 120px;
     }
 
     .comm .comm-card3 img {
