@@ -138,7 +138,7 @@
             <div class="card33 cardo">
                 <div class="card-content2">
                     <div class="about-cards3" style="width: 100%;">
-                        <form action="">
+                        <!-- <form action="">
                             <div class="bio">
                                 <h5>Your Full Name <span>*</span></h5>
                                 <input type="text" required>
@@ -163,6 +163,34 @@
                             <div class="bio">
                                 <h5>Message <span>*</span></h5>
                                 <textarea name="" id="" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message ➤</button>
+                        </form> -->
+                        <form action="send.php" method="POST">
+                            <div class="bio">
+                                <h5>Your Full Name <span>*</span></h5>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="bio">
+                                <h5>Your Email Address <span>*</span></h5>
+                                <input type="email" name="email" required>
+                            </div>
+                            <div class="bio">
+                                <h5>Subject <span>*</span></h5>
+                                <input type="text" name="subject" required>
+                            </div>
+                            <div class="bio">
+                                <h5>What are you identifying as (Optional)</h5>
+                                <select name="identity" id="itemDropdown" class="selector">
+                                    <option value="default">Default</option>
+                                    <option value="Parent">Parent</option>
+                                    <option value="Teacher">Teacher</option>
+                                    <option value="Student">Student</option>
+                                </select>
+                            </div>
+                            <div class="bio">
+                                <h5>Message <span>*</span></h5>
+                                <textarea name="message" required></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Send Message ➤</button>
                         </form>
@@ -196,26 +224,26 @@
     </section>
 
     <footer class="features" id="stories">
-      <div class="footer-cont">
-        <div class="football">
-          <div class="logo">
-          <a href="index.html">
-            <img src="images/New Logo.png" alt="RaisingYoungAuthorLogo">
-          </a>
-        </div>
-        <div class="centers">
-          <div class="footer-top">
-              <p>About Us</p>
-              <p>Courses</p>
-              <p>Workbooks</p>
-              <p>Community</p>
-              <p>Contact Us</p>
-              <p>FQA</p>
-          </div>
-            <hr style="border: 1px solid #000000; width: 100%; margin: 0 auto;">
-          <div class="footer-down">
-              <p style="color: #000000;">Copyright © 2025 Raising Young Authors, Inc. | All rights reserved.</p>
-          </div>
+        <div class="footer-cont">
+            <div class="football">
+            <div class="logo">
+            <a href="index.html">
+                <img src="images/New Logo.png" alt="RaisingYoungAuthorLogo">
+            </a>
+            </div>
+            <div class="centers">
+            <div class="footer-top">
+                <p>About Us</p>
+                <p>Courses</p>
+                <p>Workbooks</p>
+                <p>Community</p>
+                <p>Contact Us</p>
+                <p>FQA</p>
+            </div>
+                <hr style="border: 1px solid #000000; width: 100%; margin: 0 auto;">
+            <div class="footer-down">
+                <p style="color: #000000;">Copyright © 2025 Raising Young Authors, Inc. | All rights reserved.</p>
+            </div>
         </div>
         </div>
         <div class="right ops">
@@ -235,5 +263,4 @@
 
 
 <script src="script.js"></script>
-
 </html>

@@ -79,6 +79,7 @@ nav .hamburger {
     align-items: center;
     display: flex;
     margin-bottom: 0 !important;
+    padding-left: 0 !important;
 }
 
 .nav-links ul li {
@@ -2006,6 +2007,22 @@ input[type="file"] {
         padding: 20px 40px !important;
     }
 
+    .abouts {
+        margin-bottom: 40px !important;
+    }
+
+    .featured .about-contains {
+        margin-top: 75px;
+    }
+
+    .about-cards4 {
+        margin-bottom: 0px;
+    }
+
+    .about-contains4 .about-cards4 p {
+        margin-bottom: 5px;
+    }
+
     .contains {
         gap: 25px;
         flex-direction: row;
@@ -2096,6 +2113,15 @@ input[type="file"] {
         margin-bottom: 15px !important;
     }
 
+    .Pic-Court .pic .picture img {
+        height: 233px;
+    }
+
+    .Pic-Court .pic .pic-text {
+        padding: 15px;
+        margin-top: 0px;
+    }
+
     .pens {
         margin-bottom: 30px !important;
     }
@@ -2146,6 +2172,18 @@ input[type="file"] {
         font-size: 16px !important;
     }
 
+    .course-head-Top {
+        padding: 4rem 1rem 0 1rem;
+    }
+
+    .featured .grace {
+        margin-top: 20px !important;
+    }
+
+    .courses {
+        margin-top: 50px !important;
+    }
+
     /* ABOUT US */
     .headerBtns img {
         width: 90%;
@@ -2184,6 +2222,88 @@ input[type="file"] {
 
     .about-croper writer p {
         font-size: 16px !important;
+    }
+
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    .comm p {
+        font-size: 20px;
+    }
+
+    .featured .keys {
+        padding: 0px !important;
+    }
+
+    .keys .innerBase {
+        padding: 20px 0 20px 40px !important;
+    }
+
+    .keys .innerBase h2, 
+    .base .innerBase h2,
+    .based .innerBase h2,
+    .bases .innerBase h2 {
+        font-size: 20px !important;
+    }
+
+    .keys .innerBase p,
+    .base .innerBase p,
+    .based .innerBase p,
+    .bases .innerBase p {
+        font-size: 16px !important;
+    }
+
+    .keys .innerBase span,
+    .base .innerBase span,
+    .based .innerBase span,
+    .bases .innerBase span {
+        font-size: 20.95px !important;
+    }
+
+    .comple {
+        padding: 20px 35px !important;
+    }
+
+    .contd {
+        padding: 25px !important;
+        gap: 20px !important;
+    }
+
+    .cardo44 {
+        padding: 30px 20px;
+    }
+
+    .featured .base {
+        padding: 0px !important;
+    }
+
+    .base .innerBase {
+        padding: 20px 0 20px 40px !important;
+    }
+
+    .featured .based {
+        padding: 0px !important;
+    }
+
+    .based .innerBase {
+        padding: 20px 0 20px 40px !important;
+    }
+
+    .writer p {
+        font-size: 16px !important;
+    }
+
+    .featured .bases {
+        padding: 0 !important;
+    }
+
+    .bases .innerBase {
+        padding: 20px 0 20px 40px !important;
+    }
+
+    .cardo {
+        padding: 20px 30px 20px 40px;
     }
 
     .footer-cont {
@@ -2300,6 +2420,21 @@ input[type="file"] {
 
     .featured {
         padding: 10px 30px;
+    }
+
+    .lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .keys .innerBase,
+    .base .innerBase,
+    .based .innerBase,
+    .bases .innerBase {
+        width: 100%;
+    }
+
+    .contd {
+        flex-direction: column;
     }
 
     .footer-cont .logo img {
