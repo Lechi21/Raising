@@ -1069,9 +1069,9 @@ header .hamburger {
 }
 
 .Pic-Court {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 0.25fr));
-    gap: 30px;
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 0.25fr)); */
+    gap: 50px;
 }
 
 .Pic-Court .pic {
