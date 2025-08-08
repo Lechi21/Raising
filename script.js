@@ -36,3 +36,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+// CONTACT FORM SEND
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent default form submit
+
+  const form = e.target;
+  const formData = new FormData(form);
+  const messageBox = document.getElementById('form-message');
+
+  fetch('send.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(async (response) => {
+    const text = await response.text();
+
+    if (response.ok) {
+      messageBox.innerHTML = `<p style="color: green;">${text}</p>`;
+      form.reset(); // Clear the form
+    } else {
+      messageBox.innerHTML = `<p style="color: red;">${text}</p>`;
+    }
+  })
+  .catch(error => {
+    messageBox.innerHTML = `<p style="color: red;">Error: ${error}</p>`;
+  });
+});
