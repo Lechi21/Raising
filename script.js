@@ -52,6 +52,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
   })
   .then(async (response) => {
     const text = await response.text();
+      console.log("Server response:", text);
 
     if (response.ok) {
       messageBox.innerHTML = `<p style="color: green;">${text}</p>`;
