@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
         http_response_code(200);
-        echo "Success! Your message has been sent. Thank you!";
+        echo "Success! Your message has been sent. Thank you! ✅";
     } catch (Exception $e) {
         http_response_code(500);
         echo "An error occurred and your message could not be sent. Mailer Error: {$mail->ErrorInfo}";

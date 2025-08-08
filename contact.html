@@ -185,8 +185,7 @@
                             </div>
                             <button type="submit" class="submit-btn">Send Message ➤</button>
                         </form> -->
-                        <div id="form-message" style="margin-bottom: 15px;"></div>
-
+                        
                         <form id="contact-form" method="POST">
                             <div class="bio">
                                 <h5>Your Full Name <span>*</span></h5>
@@ -215,6 +214,8 @@
                             </div>
                             <button type="submit" class="submit-btn">Send Message ➤</button>
                         </form>
+                        <div id="form-message" style="margin-top: 15px;"></div>
+
                     </div>
                 </div>
             </div>
@@ -294,11 +295,11 @@
         type: 'POST',
         data: $(this).serialize(),
         success: function (response) {
-            $('#form-status').text(response).css('color', 'green');
+            $('#form-message').text(response).css('color', 'green');
             $('#contact-form')[0].reset();
         },
         error: function (xhr, status, error) {
-            $('#form-status').text('Error: ' + xhr.responseText).css('color', 'red');
+            $('#form-message').text('Error: ' + xhr.responseText).css('color', 'red');
         }
         });
     });
