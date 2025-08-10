@@ -1941,6 +1941,27 @@ input[type="file"] {
     font-size: 19px;
 }
 
+@media screen and (max-width: 1565px) {
+    .cardo44 {
+        background: #FFF0DF;
+        backdrop-filter: blur(14px);
+        border-radius: 25px;
+        padding: 30px;
+    }
+
+    .card44 {
+        flex-basis: 65%;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    .cards44 {
+        flex-basis: 30%;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .container {
         width: 95%;
