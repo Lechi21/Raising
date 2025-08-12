@@ -247,7 +247,7 @@ header .hamburger {
 
 .headerBtns {
     display: flex;
-    font-family: 'Urbanist', serif;
+    font-family: 'Outfit', serif;
     justify-content: center;
     gap: 20px;
     cursor: pointer;
