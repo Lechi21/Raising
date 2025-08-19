@@ -130,36 +130,42 @@
             <div class="card33 cardo">
                 <div class="card-content2">
                     <div class="about-cards3" style="width: 100%;">
-                        <form action="">
+                        <form id="writing-form" method="POST" enctype="multipart/form-data">
                             <div class="bio">
                                 <h5>Your Full Name <span>*</span></h5>
-                                <input type="text" required>
+                                <input type="text" name="fullName" required>
                             </div>
+
                             <div class="bio">
                                 <h5>Your Email Address <span>*</span></h5>
-                                <input type="email" required>
+                                <input type="email" name="email" required>
                             </div>
+
                             <div class="bio">
                                 <h5>Age <span>*</span></h5>
-                                <input type="text" required>
+                                <input type="text" name="age" required>
                             </div>
+
                             <div class="bio">
                                 <h5>Title of Your Work <span>*</span></h5>
-                                <input type="text" required>
+                                <input type="text" name="title" required>
                             </div>
+
                             <div class="bio">
                                 <h5>Type of Work <span>*</span></h5>
-                                <select id="itemDropdown" class="selector">
-                                    <option value="1" data-price="10.00">default</option>
-                                    <option value="1" data-price="10.00">Poem</option>
-                                    <option value="2" data-price="20.00">Novels</option>
-                                    <option value="3" data-price="30.00">Short Story</option>
+                                <select id="itemDropdown" class="selector" name="workType" required>
+                                    <option value="default">Default</option>
+                                    <option value="poem">Poem</option>
+                                    <option value="novel">Novel</option>
+                                    <option value="short_story">Short Story</option>
                                 </select>
                             </div>
+
                             <div class="bio">
-                                <h5>Message to the Editor (Optional: a short note or bio) <span>*</span></h5>
-                                <textarea name="" id="" required></textarea>
+                                <h5>Message to the Editor (Optional: a short note or bio)</h5>
+                                <textarea name="message"></textarea>
                             </div>
+
                             <div class="bios">
                                 <div class="loads">
                                     <h5>Upload Photos</h5>
@@ -167,24 +173,26 @@
                                         Upload Your Picture Here
                                         <i class="fa fa-cloud-upload"></i>
                                     </label>
-                                    <input type="file" id="photoUpload" name="userPhoto" accept="image/*" required>
+                                    <input type="file" id="photoUpload" name="userPhoto" accept="image/*">
                                 </div>
+
                                 <div class="loads">
                                     <h5>Upload File (PDF or Word)</h5>
                                     <label for="fileUpload" class="upload-btn">
                                         Upload Your Work Here
                                         <i class="fa fa-cloud-upload"></i>
                                     </label>
-                                    <input type="file" id="fileUpload" name="userFile" accept=".pdf,.doc,.docx" required>
+                                    <input type="file" id="fileUpload" name="userFile" accept=".pdf,.doc,.docx">
                                 </div>
                             </div>
-                            <button type="submit" class="submit-btn" style="margin-bottom: 20px;">Send Message 
-                                <span class="material-icons-sharp">
-                                    send
-                                </span>
+
+                            <button type="submit" class="submit-btn" style="margin-bottom: 20px;">
+                                Send Message 
+                                <span class="material-icons-sharp">send</span>
                             </button>
+                            <div id="form-message" style="margin-top: 15px; margin-bottom: 25px;"></div>
                             <div class="notes">
-                                <input id="notes" style="cursor: pointer;" type="checkbox" required>
+                                <input id="notes" name="confirm" type="checkbox" required>
                                 <span>
                                     I confirm this is my original work and give permission for it to be reviewed for publication.
                                 </span>
@@ -267,5 +275,28 @@
 
 
 <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#writing-form').on('submit', function (e) {
+        e.preventDefault();
+
+        var formData = new FormData(this);
+
+        $.ajax({
+            url: 'submit.php',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                $('#form-message').text(response).css('color', 'green');
+                $('#writing-form')[0].reset();
+            },
+            error: function (xhr, status, error) {
+                $('#form-message').text('Error: ' + xhr.responseText).css('color', 'red');
+            }
+        });
+    });
+</script>
 
 </html>

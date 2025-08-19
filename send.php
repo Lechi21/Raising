@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Include the PHPMailer classes
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -30,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // --- PHPMailer Setup ---
     $mail = new PHPMailer(true);
+    $mail->CharSet = "UTF-8";
 
     try {
         $mail->isSMTP();
@@ -48,16 +53,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->addAddress($to);
 
         //Content
-        // Set email format to plain text
-        $mail->isHTML(false);
-        $mail->Subject = $subject;
-        
-        $email_body = "A new message from Raising Young Authors contact form.\n\n";
-        $email_body .= "Name: {$name}\n";
-        $email_body .= "Email: {$email}\n";
-        $email_body .= "Subject: {$subject}\n";
-        $email_body .= "Identity: {$identity}\n";
-        $email_body .= "Message:\n{$message}\n";
+        $mail->isHTML(true); // Enable HTML
+        $mail->Subject = "📩 New Contact Form Message: $subject";
+
+        $email_body = "
+        <div style='font-family:Arial, sans-serif; background:#f4f6f9; padding:20px;'>
+            <div style='max-width:600px; margin:auto; background:#ffffff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); padding:20px;'>
+                <h2 style='color:#2a9d8f; text-align:center;'>📬 New Contact Form Message</h2>
+                <p style='font-size:16px; color:#333;'><strong>Name:</strong> {$name}</p>
+                <p style='font-size:16px; color:#333;'><strong>Email:</strong> {$email}</p>
+                <p style='font-size:16px; color:#333;'><strong>Subject:</strong> {$subject}</p>
+                <p style='font-size:16px; color:#333;'><strong>Identity:</strong> {$identity}</p>
+                <hr style='margin:20px 0; border:none; border-top:1px solid #ddd;'>
+                <p style='font-size:16px; color:#333;'><strong>Message:</strong></p>
+                <p style='font-size:15px; color:#555; background:#f9f9f9; padding:10px; border-left:4px solid #2a9d8f;'>{$message}</p>
+                <br>
+                <p style='text-align:center; font-size:14px; color:#888;'>— Raising Young Authors Contact Form</p>
+            </div>
+        </div>";
 
         $mail->Body = $email_body;
 
