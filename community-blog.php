@@ -62,38 +62,47 @@ $result = $conn->query($sql);
         }
 
         .post-card {
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-        margin-bottom: 20px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
         .post-image {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
 
         .post-content {
-        padding: 15px;
+            padding: 15px;
+        }
+
+        .post-content span {
+            font-size: 0.9rem;
+            color: #7A7A7A;
         }
 
         .post-title {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
+            font-size: 1.43rem;
+            color: #204F3D;
+            font-family: 'Merriweather', serif;
         }
 
         .post-text {
-        font-size: 1rem;
-        color: #555;
+            font-size: 1rem;
+            color: #555;
+        }
+        
+        .post-text i {
+            color: #204F3D;
+            font-size: 0.9rem;
+            cursor: pointer;
         }
 
         .post-meta {
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.9rem;
-        color: #888;
+            margin-top: 25px;
         }
     </style>
 </head>
@@ -162,27 +171,36 @@ $result = $conn->query($sql);
             <?php if ($result && $result->num_rows > 0): ?>
                 <?php while($row = $result->fetch_assoc()): ?>
                     <div class="post-card">
-                        <?php if (!empty($row['photo'])): ?>
-                            <img src="uploads/<?php echo htmlspecialchars($row['photo']); ?>" 
-                                 alt="Post Image" class="post-image">
-                        <?php endif; ?>
-                
+                        <div class="photoCard">
+                            <?php if (!empty($row['photo'])): ?>
+                                <img src="<?php echo $row['photo']; ?>" alt="Post Image" class="post-image">
+                            <?php endif; ?>
+                        </div> 
                         <div class="post-content">
                             <h2 class="post-title"><?php echo htmlspecialchars($row['title'] ?? 'Untitled'); ?></h2>
-                
-                            <p class="post-text">
-                                <?php echo nl2br(htmlspecialchars(substr($row['message'] ?? '', 0, 200))); ?>...
-                            </p>
-                
+                            <p>By <?php echo htmlspecialchars($row['fullName'] ?? 'Anonymous'); ?></p>
+                            <span>
+                                <?php 
+                                    if (!empty($row['created_at'])) {
+                                        echo date("M d, Y", strtotime($row['created_at']));
+                                    }
+                                ?>
+                            </span>    
+                                
                             <div class="post-meta">
-                                <span>By <?php echo htmlspecialchars($row['fullName'] ?? 'Anonymous'); ?></span>
-                                <span>
+                                <p class="post-text">
                                     <?php 
-                                        if (!empty($row['created_at'])) {
-                                            echo date("M d, Y", strtotime($row['created_at']));
-                                        }
+                                        $message = $row['message'] ?? '';   // full text
+                                        $excerpt = substr($message, 0, 200); // first 200 chars
+                                    
+                                        echo $excerpt; 
+                                    
+                                        // Show "...More" only if text is longer
+                                        if (strlen($message) > 200) {
+                                            echo '.....<i>More</i>';
+                                        }     
                                     ?>
-                                </span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -190,7 +208,7 @@ $result = $conn->query($sql);
             <?php else: ?>
                 <p>No approved posts yet. Please check back later.</p>
             <?php endif; ?>
-
+            
             <footer class="features" id="stories">
                 <div class="footer-cont">
                     <div class="football">
@@ -245,7 +263,7 @@ $result = $conn->query($sql);
                         <div class="leftss">
                             <p class="left-text">Subscribe Our</p>
                             <p class="left-text2">Newsletter</p>
-                            <p class="prop" style="font-size: 19px; margin-top: 30px; margin-bottom: 20px; color: #ffffff; font-weight: 500; font-family: 'Urbanist', serif;">Subscribe to our news letter and the first to receive insight, <br> updates and writing tips to help you be the star that you are 
+                            <p class="prop" style="font-size: 19px; margin-top: 30px; margin-bottom: 20px; color: #ffffff; font-weight: 500; font-family: 'Urbanist', serif;">Subscribe to our news letter and be the first to receive insight, <br> updates and writing tips to help you be the star that you are 
                             </p>
                         </div>
                         <div class="rightss">
