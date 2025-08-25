@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$user = "qvecmzzj_authors";
-$pass = "Rock2025";
-$dbname = "qvecmzzj_authors_db";
+$host = getenv("DB_HOST");
+$user = getenv("DB_USER");
+$pass = getenv("DB_PASS");
+$dbname = getenv("DB_NAME");
 $conn = new mysqli($host, $user, $pass, $dbname);
 
 $id     = $_GET['id'];

@@ -13,10 +13,10 @@ require 'PHPMailer-master/src/PHPMailer.php';
 require 'PHPMailer-master/src/SMTP.php';
 
 // Database connection
-$host = "localhost";
-$user = "qvecmzzj_authors"; 
-$pass = "Rock2025";
-$dbname = "qvecmzzj_authors_db"; 
+$host = getenv("DB_HOST");
+$user = getenv("DB_USER");
+$pass = getenv("DB_PASS");
+$dbname = getenv("DB_NAME");
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {
@@ -97,41 +97,41 @@ $subject = "New Writing: $title";
 $body = "
 <html>
 <head>
-  <style>
-    body { font-family: Arial, sans-serif; color: #333; }
-    .container { padding: 20px; border: 1px solid #ddd; border-radius: 10px; background: #f9f9f9; }
-    h2 { color: #2c3e50; }
-    p { line-height: 1.5; }
-    .btn {
-      display: inline-block;
-      margin: 5px 10px 5px 0;
-      padding: 10px 15px;
-      font-weight: bold;
-      border-radius: 5px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .btn-approve { background-color: #28a745; color: #fff !important }
-    .btn-review  { background-color: #ffc107; color: #000 !important; }
-    .btn-decline { background-color: #dc3545; color: #fff !important }
-  </style>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; }
+        .container { padding: 20px; border: 1px solid #ddd; border-radius: 10px; background: #f9f9f9; }
+        h2 { color: #2c3e50; }
+        p { line-height: 1.5; }
+        .btn {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .btn-approve { background-color: #28a745; color: #fff !important }
+        .btn-review  { background-color: #ffc107; color: #000 !important; }
+        .btn-decline { background-color: #dc3545; color: #fff !important }
+    </style>
 </head>
 <body>
-  <div class='container'>
-    <h2>📩 New Writing Received</h2>
-    <p><strong>Name:</strong> $fullName</p>
-    <p><strong>Email:</strong> $email</p>
-    <p><strong>Age:</strong> $age</p>
-    <p><strong>Title:</strong> $title</p>
-    <p><strong>Type:</strong> $workType</p>
-    <p><strong>Message:</strong><br><br> $message<br><br></p>
-    
-    <hr>
-    <h3>✅ Take Action</h3>
-    <a href='$approveLink' class='btn btn-approve'>Approve</a>
-    <a href='$reviewLink' class='btn btn-review'>Review</a>
-    <a href='$declineLink' class='btn btn-decline'>Decline</a>
-  </div>
+    <div class='container'>
+        <h2>📩 New Writing Received</h2>
+        <p><strong>Name:</strong> $fullName</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Age:</strong> $age</p>
+        <p><strong>Title:</strong> $title</p>
+        <p><strong>Type:</strong> $workType</p>
+        <p><strong>Message:</strong><br><br> $message<br><br></p>
+        
+        <hr>
+        <h3>✅ Take Action</h3>
+        <a href='$approveLink' class='btn btn-approve'>Approve</a>
+        <a href='$reviewLink' class='btn btn-review'>Review</a>
+        <a href='$declineLink' class='btn btn-decline'>Decline</a>
+    </div>
 </body>
 </html>
 ";
