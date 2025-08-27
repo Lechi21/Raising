@@ -6,10 +6,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Database connection
-$host = "localhost";
-$user = "qvecmzzj_authors"; 
-$pass = "Rock2025";
-$dbname = "qvecmzzj_authors_db"; 
+$host = getenv("DB_HOST");
+$user = getenv("DB_USER");
+$pass = getenv("DB_PASS");
+$dbname = getenv("DB_NAME");
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 if ($conn->connect_error) {
