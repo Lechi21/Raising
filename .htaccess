@@ -7,3 +7,8 @@ RewriteRule ^ %1 [R=301,L]
 # Serve .html files for extensionless URLs
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)/?$ $1.html [L]
+
+
+
+# Pretty URL: /post/123/my-title -> post.php?id=123
+RewriteRule ^post/([0-9]+)/?([a-zA-Z0-9-]*)?$ post.php?id=$1 [L,QSA]
